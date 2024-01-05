@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'pappins', sans-serif;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    position: relative;
+    background: url('img2.jpg') right no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+#main .sidebar {
+    position: fixed;
+    height: 100vh;
+    width: 270px;
+    left: -270px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5) ;
+}
+.sidebar #logo {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+}
+
+.sidebar #logo a {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    position: absolute;
+    left: 30px;
+    line-height: 60px;
+    text-decoration: none;
+}
+
+.sidebar .menu {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+
+}
+
+.sidebar .menu li {
+    margin-top: 6px;
+    padding: 14px 20px;
+    transition: all 0.3s linear;
+}
+
+.sidebar .menu li i{
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.sidebar .menu a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+
+}
+
+.sidebar .menu li:hover {
+    border-left: 1px solid #fff;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+.sidebar #social-media {
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+    transform: translate(-50%);
+}
+#social-media i {
+    font-size: 20px;
+    color: #fff;
+    opacity: 0.6;
+    padding: 0 5px;
+    transition: all 0.2s linear;
+}
+
+#social-media i:hover {
+    opacity: 1;
+}
+
+#check {
+    display: none;
+}
+#main .btn-one i {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    left: 16px;
+    line-height: 60px;
+    cursor: pointer;
+    opacity: 1;
+    transition: all 0.1s linear;
+}
+
+.sidebar .btn-two i {
+    font-size: 25px;
+    color: #fff;
+    line-height: 60px;
+    position: absolute;
+    left: 88%;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+
+.btn-one i:hover{
+    font-size: 24px;
+}
+
+#check:checked ~ .sidebar {
+    transition: smooth;
+    left: 0;
+}
+#check:checked~ .btn-one i{
+    opacity: 0;
+}
+#check:checked~ .sidebar .btn-two i{
+    opacity: 0.7;
+}
